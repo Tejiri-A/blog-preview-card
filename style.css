@@ -1,16 +1,15 @@
 /* font import */
 @font-face {
-    font-family: "Figtree";
-    src: url(/assets/fonts/Figtree-Italic-VariableFont_wght.ttf), url(/assets/fonts/Figtree-VariableFont_wght.ttf);
+  font-family: "Figtree";
+  src: url(/assets/fonts/Figtree-VariableFont_wght.ttf);
 }
 
 /* varaibles */
-:root{
-    --yellow: hsl(47, 88%, 63%);
-    --white: hsl(0, 0%, 100%);
-    --grey: hsl(0, 0%, 50%);
-    --black: hsl(0, 0%, 7%);
-    --font-size-p: 1rem;
+:root {
+  --yellow: hsl(47, 88%, 63%);
+  --white: hsl(0, 0%, 100%);
+  --grey: hsl(0, 0%, 50%);
+  --black: hsl(0, 0%, 7%);
 }
 
 /* css reset */
@@ -34,24 +33,111 @@ html {
 body {
   min-height: 100vh;
   line-height: 1.5;
+  background: var(--yellow);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Figtree";
 }
 
 /* Set shorter line heights on headings and interactive elements */
-h1, h2, h3, h4,
-button, input, label {
+h1,
+h2,
+h3,
+h4,
+button,
+input,
+label {
   line-height: 1.1;
-}
-
-/* Balance text wrapping on headings */
-h1, h2,
-h3, h4 {
-  text-wrap: balance;
 }
 
 /* Make images easier to work with */
 img,
 picture {
-  max-width: 100%;
+  width: 100%;
   display: block;
 }
 
+/* main */
+main {
+  background: var(--white);
+  width: 90vw;
+  max-width: 24rem;
+  padding: 1.4rem;
+  border-radius: 18px;
+  border: 2px solid black;
+  box-shadow: 8px 8px black;
+}
+
+.illustration {
+  border-radius: 12px;
+  margin-bottom: 1.5rem;
+}
+
+.category {
+  background: var(--yellow);
+  display: inline-block;
+  font-size: 0.875rem;
+  padding: 0.2rem 0.875rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  font-weight: 800;
+}
+
+.publish-date {
+  font-size: 0.875rem;
+  margin-bottom: 1.2rem;
+}
+
+.title {
+  font-size: 1.5rem;
+  margin-bottom: 1.2rem;
+  font-weight: 800;
+}
+
+.title:hover {
+  color: var(--yellow);
+}
+
+.body {
+  margin-bottom: 1.5rem;
+  color: var(--grey);
+  font-size: 1rem;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+  gap: 0.875rem;
+}
+
+.profile-picture {
+  width: 32px;
+}
+
+.profile-name {
+  font-weight: 800;
+  font-size: 0.875rem;
+}
+
+/* footer */
+.attribution {
+  position: absolute;
+  bottom: 0;
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+
+/* mobile view */
+@media screen and (max-width: 376px) {
+  .title {
+    font-size: 1.3rem;
+  }
+  p,
+  .body {
+    font-size: 0.875rem;
+  }
+}
